@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css position</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            height: 400px;
+            width: 400px;
+            border: 2px solid red;
+            background-color: black;
+            position: relative;
+        }
+
+        #box1{
+            height: 60px;
+            width: 60px;
+            background-color: green;
+            /* position: relative;
+            top:30px;
+            left:10px; */
+
+            position: absolute;
+            /* top:20px; */
+            right:0;
+            bottom: 0px;
+        }
+        #box2{
+            height: 70px;
+            width: 70px;
+            background-color: yellow;
+            /* position: relative;
+            top:60px;
+            right: 40px; */
+
+            position: absolute;
+            bottom: 0;
+        }
+        #box3{
+            height: 80px;
+            width: 80px;
+            background-color: red;
+            position: absolute;
+            right: 0   ;
+            top:0;
+        }
+
+        .outer{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="outer">
+        
+        <div class="container">
+            <div class="box" id="box1">box-1</div>
+            <div class="box" id="box2">box-2</div>
+            <div class="box" id="box3">box-3</div>
+        </div>
+    </div>
+
+</body>
+</html>

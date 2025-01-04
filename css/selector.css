@@ -1,0 +1,57 @@
+
+/* ! tagname selector */
+
+h1{
+    color:red
+}
+
+/* ! id selector */
+
+#p1{
+    color:green;
+}
+
+
+/* ! class selector */
+
+.container{
+    height: 200px;
+    width: 400px;
+    background-color: antiquewhite;
+}
+
+.container2{
+    height: 200px;
+    width: 300px;
+    background-color: aqua;
+}
+
+
+/* !  universal selector */
+
+*{
+   font-style: italic;
+}
+
+
+/* !  pseudoclass selector */
+
+
+#btn{
+    background-color: red;
+}
+
+#btn:hover{
+    background-color: green;
+}
+
+#btn:active{
+    background-color: blue;
+}
+
+
+
+
+.container2 > h1{
+    background-color: blueviolet;
+}
