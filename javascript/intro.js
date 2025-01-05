@@ -266,3 +266,286 @@ console.log("=============")
 hi(20,"virat",()=>{
     console.log('i am callback fucntion')
 })
+
+// !  array 
+
+let arr1 = [10 , 'abc', true, [30,50]]
+
+console.log(arr1)
+console.log(arr1.length)
+
+
+
+// arr1.push("bye")
+// console.log(arr1)
+
+
+let ele =arr1.pop()
+console.log(ele)
+console.log(arr1)
+
+
+// arr1.unshift("santanu")
+
+// console.log(arr1)
+
+arr1.shift()
+console.log(arr1)
+
+
+console.log(arr1.includes('abc'))   // true
+
+
+// !  slice and splice 
+
+
+let arr2 = [10,20,30,40,50,60]
+
+
+
+
+console.log(arr2.slice(1,4))
+
+console.log(arr2)
+
+
+// arr2.splice(1,3,"hello")
+
+// console.log(arr2)
+
+
+// arr2.splice(2,0,"hello")
+// console.log(arr2)
+
+
+
+// !   higherorder array methods 
+
+
+// ! forEach()
+
+let eles =  arr2.forEach((ele)=>{
+    console.log(ele)
+     return ele
+})
+
+console.log(eles)
+console.log("-------------------------------")
+
+// !  Map()
+
+let mappedArr = arr2.map((ele)=>{
+   return ele+1000
+})
+
+console.log(mappedArr)
+
+
+arr2.forEach((ele , index , arr)=>{
+    console.log(ele ,index,arr)
+})
+
+
+
+// !  filter()
+
+let filteredArr = arr2.filter((ele)=>{
+    return ele > 30
+})
+
+console.log(filteredArr)
+
+
+// let f = arr2.filter(ele => ele > 30)
+// console.log(f)
+
+
+// !  reduce()
+
+let sum = arr2.reduce((acc,ele)=>{
+    
+   return acc * ele
+},1)
+
+console.log(sum)
+
+
+// let f2 =arr2.filter((ele)=> ele>30).map((ele)=> ele+1000).reduce((acc,ele)=> acc+ele)
+
+// console.log(f2)
+
+
+let arr3 = [5,1,3,2,9]
+
+let asc = arr3.sort((a,b)=>{
+    return a - b
+})
+
+console.log(asc)
+
+let desc = arr3.sort((a,b)=>b -a)
+console.log(desc)
+
+
+
+// !   object 
+
+
+let student = {
+    sname:"abc",
+    age:10,
+    phNo:9898989898,
+    skills:["html",'css','js'],
+    add: {
+        city:'chennai',
+        pin:3434343
+    },
+    isPlayer:false
+}
+
+
+let ob1 = {
+    sname:"xy",
+    ph:8989,
+    age:10
+}
+
+console.log(ob1.sname)
+
+ob1.age = 12 
+
+console.log(ob1)
+
+// delete ob1.age
+// console.log(ob1)
+
+ob1.city = "chennai"
+console.log(ob1)
+
+
+// ! 1. Object.keys()
+
+console.log(Object.keys(ob1))
+
+// ! 2. Object.values()
+
+console.log(Object.values(ob1))
+
+// ! 3. Object.entries()
+
+console.log(Object.entries(ob1))
+
+
+// ! 4. Object.freeze()
+
+// console.log(ob1)
+
+// Object.freeze(ob1)
+
+// ob1.age = 20
+
+// delete ob1.age
+
+// ob1.pin = 7878
+
+// console.log(ob1)
+
+// console.log(Object.isFrozen(ob1))
+
+
+// !  Object.seal()
+
+// console.log(ob1)
+
+// Object.seal(ob1)
+
+// delete ob1.age
+// ob1.pin = 9898
+
+// ob1.age = 20
+// console.log(ob1)
+
+
+
+// !  json 
+
+
+console.log(ob1)
+
+let jsonData = JSON.stringify(ob1)
+console.log(jsonData)
+
+let obb = JSON.parse(jsonData)
+console.log(obb)
+
+
+// !  promise 
+
+
+// let p = new Promise((resolve , reject)=>{
+
+//     // resolve("i have done this work")
+//     reject("i was not well...")
+// })
+// .then((data)=>{
+//   console.log(data)
+// })
+// .catch((err)=>{
+//     console.log(err)
+// })
+// .finally(
+//     console.log('promise is there')
+// )
+// console.log(p)
+
+
+console.log("==================================================")
+
+
+// !  fetch()
+
+// let fetchedData =  fetch("https://fakestoreapi.com/products")
+
+// // console.log(fetchedData)
+
+
+// fetchedData.then((data)=>{
+
+//     //  console.log(data)
+
+//     let jsonData = data.json()
+//     // console.log(jsonData)
+
+//     jsonData.then((fd)=>{
+//         console.log(fd)
+//     })
+//     .catch((err)=>{
+//         console.log(err)
+//     })
+// }).catch((err)=>{
+//     console.log(err)
+// })
+
+
+
+console.log("=================================================")
+
+
+// !  async await 
+
+
+let getData = async ()=>{
+
+    let fetchedData = await fetch("https://fakestoreapi.com/products")
+    // console.log(fetchedData)
+
+    let jsonData = await fetchedData.json()
+    console.log(jsonData)
+    
+}
+
+getData()
+
+
+
+
